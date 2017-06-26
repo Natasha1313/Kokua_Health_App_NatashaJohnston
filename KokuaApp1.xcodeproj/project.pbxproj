@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B070FA21F0018CF000DEE12 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D01B1EFDF88C00C14234 /* RemindersViewController.swift */; };
+		9BE7E6F61F000DD0000337DF /* JosefinSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BE7E6F41F000CF9000337DF /* JosefinSans-SemiBold.ttf */; };
+		9BE7E6F71F000DD1000337DF /* JosefinSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BE7E6F51F000CF9000337DF /* JosefinSans-Light.ttf */; };
 		9BF3CFEC1EFDE89900C14234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3CFEB1EFDE89900C14234 /* AppDelegate.swift */; };
 		9BF3CFEE1EFDE89900C14234 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3CFED1EFDE89900C14234 /* FirstViewController.swift */; };
 		9BF3CFF01EFDE89900C14234 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3CFEF1EFDE89900C14234 /* SecondViewController.swift */; };
@@ -15,6 +18,8 @@
 		9BF3CFF81EFDE89900C14234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BF3CFF61EFDE89900C14234 /* LaunchScreen.storyboard */; };
 		9BF3D0031EFDE89A00C14234 /* KokuaApp1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D0021EFDE89A00C14234 /* KokuaApp1Tests.swift */; };
 		9BF3D00E1EFDE89A00C14234 /* KokuaApp1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D00D1EFDE89A00C14234 /* KokuaApp1UITests.swift */; };
+		9BF3D01E1EFDFE6700C14234 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D01D1EFDFE6700C14234 /* JournalViewController.swift */; };
+		9BF3D0201EFE049500C14234 /* CreateReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3D01F1EFE049500C14234 /* CreateReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BE7E6F11F000BF4000337DF /* KokuaApp1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KokuaApp1; sourceTree = "<group>"; };
+		9BE7E6F41F000CF9000337DF /* JosefinSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		9BE7E6F51F000CF9000337DF /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JosefinSans-Light.ttf"; sourceTree = "<group>"; };
 		9BF3CFE81EFDE89900C14234 /* KokuaApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokuaApp1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF3CFEB1EFDE89900C14234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BF3CFED1EFDE89900C14234 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +57,9 @@
 		9BF3D0091EFDE89A00C14234 /* KokuaApp1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KokuaApp1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BF3D00D1EFDE89A00C14234 /* KokuaApp1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KokuaApp1UITests.swift; sourceTree = "<group>"; };
 		9BF3D00F1EFDE89A00C14234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BF3D01B1EFDF88C00C14234 /* RemindersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		9BF3D01D1EFDFE6700C14234 /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		9BF3D01F1EFE049500C14234 /* CreateReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BE7E6F31F000CB8000337DF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9BE7E6F41F000CF9000337DF /* JosefinSans-SemiBold.ttf */,
+				9BE7E6F51F000CF9000337DF /* JosefinSans-Light.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		9BF3CFDF1EFDE89900C14234 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +119,15 @@
 		9BF3CFEA1EFDE89900C14234 /* KokuaApp1 */ = {
 			isa = PBXGroup;
 			children = (
+				9BE7E6F31F000CB8000337DF /* Fonts */,
 				9BF3CFEB1EFDE89900C14234 /* AppDelegate.swift */,
 				9BF3CFED1EFDE89900C14234 /* FirstViewController.swift */,
 				9BF3CFEF1EFDE89900C14234 /* SecondViewController.swift */,
 				9BF3CFF11EFDE89900C14234 /* Main.storyboard */,
+				9BF3D01F1EFE049500C14234 /* CreateReminderViewController.swift */,
+				9BF3D01B1EFDF88C00C14234 /* RemindersViewController.swift */,
+				9BF3D01D1EFDFE6700C14234 /* JournalViewController.swift */,
+				9BE7E6F11F000BF4000337DF /* KokuaApp1 */,
 				9BF3CFF41EFDE89900C14234 /* Assets.xcassets */,
 				9BF3CFF61EFDE89900C14234 /* LaunchScreen.storyboard */,
 				9BF3CFF91EFDE89900C14234 /* Info.plist */,
@@ -235,6 +260,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE7E6F61F000DD0000337DF /* JosefinSans-SemiBold.ttf in Resources */,
+				9BE7E6F71F000DD1000337DF /* JosefinSans-Light.ttf in Resources */,
 				9BF3CFF81EFDE89900C14234 /* LaunchScreen.storyboard in Resources */,
 				9BF3CFF51EFDE89900C14234 /* Assets.xcassets in Resources */,
 				9BF3CFF31EFDE89900C14234 /* Main.storyboard in Resources */,
@@ -263,8 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BF3CFF01EFDE89900C14234 /* SecondViewController.swift in Sources */,
+				9BF3D0201EFE049500C14234 /* CreateReminderViewController.swift in Sources */,
+				9B070FA21F0018CF000DEE12 /* RemindersViewController.swift in Sources */,
 				9BF3CFEC1EFDE89900C14234 /* AppDelegate.swift in Sources */,
 				9BF3CFEE1EFDE89900C14234 /* FirstViewController.swift in Sources */,
+				9BF3D01E1EFDFE6700C14234 /* JournalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +539,7 @@
 				9BF3D0141EFDE89A00C14234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BF3D0151EFDE89A00C14234 /* Build configuration list for PBXNativeTarget "KokuaApp1Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +548,7 @@
 				9BF3D0171EFDE89A00C14234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BF3D0181EFDE89A00C14234 /* Build configuration list for PBXNativeTarget "KokuaApp1UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +557,7 @@
 				9BF3D01A1EFDE89A00C14234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

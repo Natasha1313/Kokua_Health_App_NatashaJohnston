@@ -1,14 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="JosefinSans-Light.ttf">
+            <string>JosefinSans-Light</string>
+        </array>
+        <array key="JosefinSans-SemiBold.ttf">
+            <string>JosefinSans-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--First-->
+        <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="KokuaApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -17,69 +32,735 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL0-VI-sLQ">
+                                <rect key="frame" x="135" y="49" width="104" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg1" translatesAutoresizingMaskIntoConstraints="NO" id="z4Q-at-1Lb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoKokua" translatesAutoresizingMaskIntoConstraints="NO" id="ejf-gg-Plt">
+                                <rect key="frame" x="84" y="35" width="206" height="173"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="wNK-cW-uU2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icu-cf-Vgb">
+                                <rect key="frame" x="16" y="49" width="79" height="25"/>
+                                <state key="normal" image="menu"/>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ag-Up-AVg">
+                                <rect key="frame" x="16" y="198" width="343" height="367"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="t3V-Iz-lcD">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="367"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="Ls9-vG-5Tq"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dak-3V-htI">
+                                <rect key="frame" x="19" y="216" width="337" height="330"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text" base64-UTF8="YES">
+DQ
+</string>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-ta-eBK">
+                                <rect key="frame" x="31" y="209" width="312" height="344"/>
+                                <mutableString key="text">Welcome to KoKua, a concussion application design for those recovering from any form of brain injury. The purpose of this application is to have a space where your recovery needs are put first. KoKua is a Hawaiian word that means help, aid, assistance, relief and helper. The Kokua App helps to make sure it lives up to it’s name when helping people recover. There are three components to KoKua: To inform you or those around you about concussions and recoveryTo help you remember tasks of the day or Doctors appointments To have you check in on how you are feeling. This will allow not only yourself to see your progress but also your doctors. This is done within a 7 day period.</mutableString>
+                                <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©2017 Natasha Johnston Toronto, ON Canada " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-eh-uAA">
+                                <rect key="frame" x="95" y="591" width="184" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="IL0-VI-sLQ" firstAttribute="leading" secondItem="icu-cf-Vgb" secondAttribute="trailing" constant="40" id="1LJ-oS-4mH"/>
+                            <constraint firstItem="6ag-Up-AVg" firstAttribute="centerY" secondItem="h1Z-ta-eBK" secondAttribute="centerY" id="4MV-pV-aiR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ejf-gg-Plt" secondAttribute="trailing" constant="69" id="9TE-de-RBm"/>
+                            <constraint firstItem="ejf-gg-Plt" firstAttribute="centerX" secondItem="z4Q-at-1Lb" secondAttribute="centerX" id="B9e-6g-KVZ"/>
+                            <constraint firstItem="Dak-3V-htI" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="3" id="G1B-8W-ean"/>
+                            <constraint firstItem="6ag-Up-AVg" firstAttribute="leading" secondItem="icu-cf-Vgb" secondAttribute="leading" id="Hza-8w-2bA"/>
+                            <constraint firstItem="ejf-gg-Plt" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="15" id="IAv-VF-ayd"/>
+                            <constraint firstItem="6ag-Up-AVg" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="ITZ-fC-jfF"/>
+                            <constraint firstItem="z4Q-at-1Lb" firstAttribute="centerX" secondItem="6ag-Up-AVg" secondAttribute="centerX" id="J9d-WU-9rD"/>
+                            <constraint firstItem="ejf-gg-Plt" firstAttribute="centerX" secondItem="6ag-Up-AVg" secondAttribute="centerX" id="Kzg-dX-zSr"/>
+                            <constraint firstItem="IL0-VI-sLQ" firstAttribute="top" secondItem="icu-cf-Vgb" secondAttribute="top" id="OBK-1r-ZG8"/>
+                            <constraint firstItem="Dak-3V-htI" firstAttribute="centerY" secondItem="h1Z-ta-eBK" secondAttribute="centerY" id="S2J-NG-lMH"/>
+                            <constraint firstItem="ejf-gg-Plt" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="68" id="USI-ja-LcS"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="6ag-Up-AVg" secondAttribute="bottom" constant="53" id="VoF-fl-Lzm"/>
+                            <constraint firstItem="6ag-Up-AVg" firstAttribute="centerY" secondItem="Dak-3V-htI" secondAttribute="centerY" id="Y7a-cZ-6EE"/>
+                            <constraint firstItem="ejf-gg-Plt" firstAttribute="centerX" secondItem="IL0-VI-sLQ" secondAttribute="centerX" id="ZcP-B0-c57"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dak-3V-htI" secondAttribute="trailing" constant="3" id="asR-Hb-qhV"/>
+                            <constraint firstItem="IL0-VI-sLQ" firstAttribute="centerX" secondItem="6ag-Up-AVg" secondAttribute="centerX" id="cuL-GU-ovp"/>
+                            <constraint firstItem="h1Z-ta-eBK" firstAttribute="centerX" secondItem="6ag-Up-AVg" secondAttribute="centerX" id="efs-if-nXb"/>
+                            <constraint firstItem="Dak-3V-htI" firstAttribute="centerX" secondItem="6ag-Up-AVg" secondAttribute="centerX" id="fER-M9-xO2"/>
+                            <constraint firstItem="z4Q-at-1Lb" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="gAL-MM-JGw"/>
+                            <constraint firstItem="IL0-VI-sLQ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="29" id="n5N-7A-D8r"/>
+                            <constraint firstItem="h1Z-ta-eBK" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="15" id="oXu-aR-fpN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h1Z-ta-eBK" secondAttribute="trailing" constant="16" id="pMQ-gP-Tea"/>
+                            <constraint firstItem="h1Z-ta-eBK" firstAttribute="top" secondItem="ejf-gg-Plt" secondAttribute="bottom" constant="1" id="sCK-Ry-Qss"/>
+                            <constraint firstItem="Dak-3V-htI" firstAttribute="top" secondItem="ejf-gg-Plt" secondAttribute="bottom" constant="8" symbolic="YES" id="uhz-Sm-bsX"/>
+                            <constraint firstItem="z4Q-at-1Lb" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="ulF-Ey-157"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="z4Q-at-1Lb" secondAttribute="bottom" constant="8" id="vIa-CL-Dzc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
-        <!--Second-->
+        <!--Create Reminder-->
+        <scene sceneID="9Yg-oq-Xcs">
+            <objects>
+                <viewController id="3gL-9z-Btb" customClass="CreateReminderViewController" customModule="KokuaApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b6r-ZQ-ONX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sba-k2-vMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R35-gK-liw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bkg1" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-ba-Kcc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nl2-xr-Z9f">
+                                <rect key="frame" x="28" y="145" width="318" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a Reminder..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CM-0o-ogz">
+                                <rect key="frame" x="50" y="383" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="3gL-9z-Btb" id="1Mk-uZ-Z4K"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-Gm-atS">
+                                <rect key="frame" x="129" y="458" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.79524293664383561" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Reminder">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addReminder:" destination="3gL-9z-Btb" eventType="touchUpInside" id="ntS-Ql-Chu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoKokua" translatesAutoresizingMaskIntoConstraints="NO" id="ZHr-qf-pZa">
+                                <rect key="frame" x="224" y="28" width="135" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Np-yY-17K">
+                                <rect key="frame" x="28" y="48" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menu"/>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THK-an-y57">
+                                <rect key="frame" x="67" y="223" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="SN8-ls-0xi">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXa-1t-uiw">
+                                            <rect key="frame" x="8" y="8" width="224" height="112"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Add Reminders throughout your day and delete them as you go. Make sure to put down the date/ time and any other important information. </string>
+                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©2017 Natasha Johnston Toronto, ON Canada " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dis-wJ-T0T">
+                                <rect key="frame" x="95" y="566" width="184" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Create Reminder" image="first" id="yz4-Mh-934"/>
+                    <connections>
+                        <outlet property="input" destination="7CM-0o-ogz" id="287-4c-VTt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pu3-Uf-h6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-810.39999999999998" y="856.82158920539734"/>
+        </scene>
+        <!--Reminders-->
+        <scene sceneID="G7h-Wp-I6X">
+            <objects>
+                <viewController id="hcC-h1-oFD" customClass="RemindersViewController" customModule="KokuaApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2JV-Z1-zDh"/>
+                        <viewControllerLayoutGuide type="bottom" id="UEL-N7-cqC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Wg-F5-Eci">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg1" translatesAutoresizingMaskIntoConstraints="NO" id="fns-fR-5rt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="657"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k88-PT-TlR">
+                                <rect key="frame" x="0.0" y="158" width="375" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="0.71998073630136983" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Htk-1B-1Lb">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Htk-1B-1Lb" id="rKN-DN-AAY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="0.71998073630000003" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hcC-h1-oFD" id="KYb-r7-Jqf"/>
+                                    <outlet property="delegate" destination="hcC-h1-oFD" id="alw-Nz-4B5"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoKokua" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-hE-1ID">
+                                <rect key="frame" x="224" y="28" width="135" height="65"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fa-eo-run">
+                                <rect key="frame" x="0.0" y="48" width="79" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="iSV-x6-9dT"/>
+                                    <constraint firstAttribute="height" constant="25" id="xlP-p6-kA3"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="©2017 Natasha Johnston Toronto, ON Canada " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saG-py-Bon">
+                                <rect key="frame" x="95" y="591" width="184" height="10"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkN-x1-BwA">
+                                <rect key="frame" x="41" y="97" width="292" height="53"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="53"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="lkN-x1-BwA" firstAttribute="top" secondItem="2JV-Z1-zDh" secondAttribute="bottom" constant="77" id="1l7-G8-s4u"/>
+                            <constraint firstItem="fns-fR-5rt" firstAttribute="top" secondItem="2Wg-F5-Eci" secondAttribute="top" id="2Zz-Zg-gUG"/>
+                            <constraint firstItem="9Ea-hE-1ID" firstAttribute="trailing" secondItem="2Wg-F5-Eci" secondAttribute="trailingMargin" id="B87-wm-JBG"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="top" secondItem="lkN-x1-BwA" secondAttribute="bottom" constant="25" id="KJm-95-X16"/>
+                            <constraint firstItem="6Fa-eo-run" firstAttribute="top" secondItem="2JV-Z1-zDh" secondAttribute="bottom" constant="28" id="MqQ-Yg-GLJ"/>
+                            <constraint firstItem="UEL-N7-cqC" firstAttribute="top" secondItem="k88-PT-TlR" secondAttribute="bottom" constant="8" id="OIF-BT-iO7"/>
+                            <constraint firstItem="lkN-x1-BwA" firstAttribute="leading" secondItem="2Wg-F5-Eci" secondAttribute="leadingMargin" constant="25" id="Oxh-eJ-k00"/>
+                            <constraint firstItem="9Ea-hE-1ID" firstAttribute="leading" secondItem="6Fa-eo-run" secondAttribute="trailing" constant="145" id="PGc-gZ-Np2"/>
+                            <constraint firstItem="UEL-N7-cqC" firstAttribute="top" secondItem="k88-PT-TlR" secondAttribute="bottom" constant="44" id="QMv-1a-GbB"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="leading" secondItem="2Wg-F5-Eci" secondAttribute="leading" id="RcB-ZM-njr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fns-fR-5rt" secondAttribute="bottom" constant="10" id="Sdw-Jt-ATy"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="top" secondItem="lkN-x1-BwA" secondAttribute="bottom" id="Tgg-LP-Xk3"/>
+                            <constraint firstItem="UEL-N7-cqC" firstAttribute="top" secondItem="k88-PT-TlR" secondAttribute="bottom" constant="44" id="Wae-J2-9BT"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="top" secondItem="lkN-x1-BwA" secondAttribute="bottom" constant="8" id="Xaf-KQ-3um"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="leading" secondItem="2Wg-F5-Eci" secondAttribute="leading" id="YHz-dL-eq6"/>
+                            <constraint firstItem="6Fa-eo-run" firstAttribute="leading" secondItem="k88-PT-TlR" secondAttribute="leading" id="ZSF-I9-Cep"/>
+                            <constraint firstItem="6Fa-eo-run" firstAttribute="centerY" secondItem="9Ea-hE-1ID" secondAttribute="centerY" id="arH-vx-764"/>
+                            <constraint firstItem="lkN-x1-BwA" firstAttribute="top" secondItem="9Ea-hE-1ID" secondAttribute="bottom" constant="4" id="bdu-LT-Shm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkN-x1-BwA" secondAttribute="trailing" constant="26" id="dMz-9Y-kZu"/>
+                            <constraint firstItem="fns-fR-5rt" firstAttribute="trailing" secondItem="k88-PT-TlR" secondAttribute="trailing" id="ftM-Cm-VWq"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="top" secondItem="lkN-x1-BwA" secondAttribute="bottom" constant="8" id="hkq-HN-ypr"/>
+                            <constraint firstItem="k88-PT-TlR" firstAttribute="top" secondItem="lkN-x1-BwA" secondAttribute="bottom" constant="25" id="oWs-RB-v7e"/>
+                            <constraint firstItem="UEL-N7-cqC" firstAttribute="top" secondItem="k88-PT-TlR" secondAttribute="bottom" constant="44" id="peo-Hd-Gv1"/>
+                            <constraint firstAttribute="trailing" secondItem="k88-PT-TlR" secondAttribute="trailing" id="qG1-nF-QU9"/>
+                            <constraint firstItem="9Ea-hE-1ID" firstAttribute="top" secondItem="2JV-Z1-zDh" secondAttribute="bottom" constant="8" id="qk0-Z0-qmj"/>
+                            <constraint firstAttribute="trailing" secondItem="k88-PT-TlR" secondAttribute="trailing" id="sDB-pJ-cDF"/>
+                            <constraint firstItem="6Fa-eo-run" firstAttribute="leading" secondItem="fns-fR-5rt" secondAttribute="leading" id="vtQ-1d-wBL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KJm-95-X16"/>
+                                <exclude reference="Tgg-LP-Xk3"/>
+                                <exclude reference="oWs-RB-v7e"/>
+                                <exclude reference="OIF-BT-iO7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reminders" image="first" id="Gc2-gE-J6q"/>
+                    <connections>
+                        <outlet property="myTableView" destination="k88-PT-TlR" id="Fuu-Ei-Xkz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjr-k2-m2X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="870.31484257871068"/>
+        </scene>
+        <!--Journal-->
+        <scene sceneID="kaX-AK-UIl">
+            <objects>
+                <viewController id="nbT-Uc-X3z" customClass="JournalViewController" customModule="KokuaApp1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HrF-z1-nvg"/>
+                        <viewControllerLayoutGuide type="bottom" id="C64-gK-SgC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LSp-vK-8Pc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg1" translatesAutoresizingMaskIntoConstraints="NO" id="hMs-17-Xwk">
+                                <rect key="frame" x="-189" y="-20" width="750" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmx-Fq-caA">
+                                <rect key="frame" x="89" y="127" width="196" height="75"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97e-up-lIg">
+                                <rect key="frame" x="16" y="48" width="79" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="D7g-x5-0B9"/>
+                                    <constraint firstAttribute="height" constant="25" id="G0b-yb-Y3v"/>
+                                </constraints>
+                                <state key="normal" image="menu"/>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVi-2a-Sbh">
+                                <rect key="frame" x="17" y="210" width="342" height="374"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="os1-pj-hYC">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="374"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWg-JC-sGt">
+                                            <rect key="frame" x="241" y="55" width="92" height="30"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80439319349315064" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                            <state key="normal" title="Add">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="action:" destination="nbT-Uc-X3z" eventType="touchUpInside" id="CFb-Te-9SD"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1wN-Gz-SwD">
+                                            <rect key="frame" x="241" y="175" width="92" height="30"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="92" id="MxZ-ac-wIB"/>
+                                                <constraint firstAttribute="height" constant="30" id="wrB-dB-7bl"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                            <state key="normal" title="Add">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="add1:" destination="nbT-Uc-X3z" eventType="touchUpInside" id="gcn-Ot-OS4"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8E-xl-oHn">
+                                            <rect key="frame" x="130" y="94" width="75" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="eEu-7A-rsj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are your feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8G2-Qu-Tt2">
+                                            <rect key="frame" x="54" y="26" width="235" height="22"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" How are your feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obj-7A-mdM">
+                                            <rect key="frame" x="39" y="143" width="263" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="263" id="MOx-wn-jpa"/>
+                                                <constraint firstAttribute="height" constant="24" id="Y9L-VW-2KQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Any Pain?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USo-2c-W5h">
+                                            <rect key="frame" x="26" y="175" width="182" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Are you ok?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0rs-ra-4hs">
+                                            <rect key="frame" x="26" y="56" width="182" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="182" id="8kA-dh-Fnz"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thoughts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6O-De-CDY">
+                                            <rect key="frame" x="121" y="213" width="98" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="WBW-4v-ye5"/>
+                                                <constraint firstAttribute="width" constant="98" id="gnT-BJ-Oec"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="It takes time..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TAb-78-R22">
+                                            <rect key="frame" x="23" y="291" width="182" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g8-e3-ba8">
+                                            <rect key="frame" x="241" y="289" width="92" height="29"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                            <state key="normal" title="Add">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="add2:" destination="nbT-Uc-X3z" eventType="touchUpInside" id="Ci2-ED-pK0"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are your feeling today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-lt-Tqd">
+                                            <rect key="frame" x="53" y="261" width="235" height="22"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feelings:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-g3-b4w">
+                                            <rect key="frame" x="133" y="329" width="77" height="24"/>
+                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="24"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8G2-Qu-Tt2" firstAttribute="leading" secondItem="os1-pj-hYC" secondAttribute="leading" constant="54" id="1Ww-Zr-DCM"/>
+                                        <constraint firstItem="8G2-Qu-Tt2" firstAttribute="trailing" secondItem="1wN-Gz-SwD" secondAttribute="trailing" constant="-44" id="2Pf-ml-INH"/>
+                                        <constraint firstItem="TAb-78-R22" firstAttribute="leading" secondItem="os1-pj-hYC" secondAttribute="leading" constant="23" id="7wb-f5-sVM"/>
+                                        <constraint firstItem="TAb-78-R22" firstAttribute="trailing" secondItem="O8E-xl-oHn" secondAttribute="trailing" id="DF3-Oz-Tni"/>
+                                        <constraint firstItem="Z6O-De-CDY" firstAttribute="top" secondItem="USo-2c-W5h" secondAttribute="bottom" constant="8" symbolic="YES" id="Egt-Hi-hiE"/>
+                                        <constraint firstItem="USo-2c-W5h" firstAttribute="top" secondItem="obj-7A-mdM" secondAttribute="bottom" constant="8" symbolic="YES" id="FaK-Yr-ZEF"/>
+                                        <constraint firstItem="obj-7A-mdM" firstAttribute="leading" secondItem="os1-pj-hYC" secondAttribute="leading" constant="39" id="G8S-gl-oJI"/>
+                                        <constraint firstItem="O8E-xl-oHn" firstAttribute="top" secondItem="0rs-ra-4hs" secondAttribute="bottom" constant="8" id="Gqu-ES-llt"/>
+                                        <constraint firstItem="1wN-Gz-SwD" firstAttribute="leading" secondItem="USo-2c-W5h" secondAttribute="trailing" constant="33" id="Hax-zh-WzB"/>
+                                        <constraint firstItem="8G2-Qu-Tt2" firstAttribute="centerX" secondItem="O8E-xl-oHn" secondAttribute="centerX" constant="4" id="Izi-GD-pEU"/>
+                                        <constraint firstItem="USo-2c-W5h" firstAttribute="leading" secondItem="0rs-ra-4hs" secondAttribute="leading" id="OuV-IJ-nFM"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="trailing" secondItem="3g8-e3-ba8" secondAttribute="trailing" id="SR5-zZ-LZW"/>
+                                        <constraint firstItem="Z6O-De-CDY" firstAttribute="centerX" secondItem="os1-pj-hYC" secondAttribute="centerX" constant="-1" id="SUJ-WG-2dZ"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="leading" secondItem="1wN-Gz-SwD" secondAttribute="leading" id="Wbf-vu-ApM"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="baseline" secondItem="0rs-ra-4hs" secondAttribute="baseline" id="Xcr-Fz-s17"/>
+                                        <constraint firstItem="0rs-ra-4hs" firstAttribute="top" secondItem="os1-pj-hYC" secondAttribute="top" constant="56" id="ZtT-ot-Mlr"/>
+                                        <constraint firstItem="obj-7A-mdM" firstAttribute="centerX" secondItem="vfh-lt-Tqd" secondAttribute="centerX" id="aeO-Zy-moX"/>
+                                        <constraint firstItem="obj-7A-mdM" firstAttribute="top" secondItem="O8E-xl-oHn" secondAttribute="bottom" constant="32" id="b5T-zR-7ju"/>
+                                        <constraint firstItem="fLp-g3-b4w" firstAttribute="top" secondItem="TAb-78-R22" secondAttribute="bottom" constant="8" symbolic="YES" id="bGf-TH-Joq"/>
+                                        <constraint firstItem="TAb-78-R22" firstAttribute="top" secondItem="vfh-lt-Tqd" secondAttribute="bottom" constant="8" symbolic="YES" id="dhl-EN-yZE"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="top" secondItem="8G2-Qu-Tt2" secondAttribute="bottom" constant="7" id="icS-Yo-HQN"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="trailing" secondItem="1wN-Gz-SwD" secondAttribute="trailing" id="k4y-fO-3eo"/>
+                                        <constraint firstItem="obj-7A-mdM" firstAttribute="centerX" secondItem="Z6O-De-CDY" secondAttribute="centerX" id="lLs-xH-wnm"/>
+                                        <constraint firstItem="USo-2c-W5h" firstAttribute="trailing" secondItem="0rs-ra-4hs" secondAttribute="trailing" id="qOO-lR-GwP"/>
+                                        <constraint firstItem="3g8-e3-ba8" firstAttribute="top" secondItem="vfh-lt-Tqd" secondAttribute="bottom" constant="6" id="rhS-fl-4yv"/>
+                                        <constraint firstItem="obj-7A-mdM" firstAttribute="top" secondItem="PWg-JC-sGt" secondAttribute="bottom" constant="58" id="s1s-nQ-OfS"/>
+                                        <constraint firstItem="USo-2c-W5h" firstAttribute="top" secondItem="1wN-Gz-SwD" secondAttribute="top" id="w8S-28-LyS"/>
+                                        <constraint firstItem="vfh-lt-Tqd" firstAttribute="top" secondItem="Z6O-De-CDY" secondAttribute="bottom" constant="22" id="wlZ-fv-dws"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="leading" secondItem="3g8-e3-ba8" secondAttribute="leading" id="wvF-Pc-Gu7"/>
+                                        <constraint firstItem="PWg-JC-sGt" firstAttribute="firstBaseline" secondItem="0rs-ra-4hs" secondAttribute="baseline" id="xAg-Z2-KzY"/>
+                                        <constraint firstItem="fLp-g3-b4w" firstAttribute="centerX" secondItem="8G2-Qu-Tt2" secondAttribute="centerX" id="zrp-7E-pOk"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="fDv-iO-FWs"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoKokua" translatesAutoresizingMaskIntoConstraints="NO" id="X1O-QR-1Yj">
+                                <rect key="frame" x="234" y="28" width="125" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="p6u-Lh-tQa"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="97e-up-lIg" firstAttribute="top" secondItem="HrF-z1-nvg" secondAttribute="bottom" constant="28" id="6U2-CW-ynX"/>
+                            <constraint firstItem="GVi-2a-Sbh" firstAttribute="leading" secondItem="LSp-vK-8Pc" secondAttribute="leadingMargin" constant="1" id="A8i-kr-S24"/>
+                            <constraint firstAttribute="bottom" secondItem="hMs-17-Xwk" secondAttribute="bottom" constant="20" id="I3d-WE-bSJ"/>
+                            <constraint firstItem="hMs-17-Xwk" firstAttribute="top" secondItem="LSp-vK-8Pc" secondAttribute="top" constant="-20" id="K6p-3e-RAB"/>
+                            <constraint firstItem="xmx-Fq-caA" firstAttribute="leading" secondItem="LSp-vK-8Pc" secondAttribute="leadingMargin" constant="73" id="OgT-sF-rLW"/>
+                            <constraint firstItem="GVi-2a-Sbh" firstAttribute="leading" secondItem="97e-up-lIg" secondAttribute="leading" constant="1" id="VS0-n6-faN"/>
+                            <constraint firstItem="GVi-2a-Sbh" firstAttribute="top" secondItem="LSp-vK-8Pc" secondAttribute="top" constant="210" id="Xb8-SF-dab"/>
+                            <constraint firstItem="X1O-QR-1Yj" firstAttribute="top" secondItem="HrF-z1-nvg" secondAttribute="bottom" constant="8" id="YVf-Au-LXj"/>
+                            <constraint firstItem="X1O-QR-1Yj" firstAttribute="centerY" secondItem="97e-up-lIg" secondAttribute="centerY" constant="0.5" id="YpJ-jm-V3L"/>
+                            <constraint firstItem="hMs-17-Xwk" firstAttribute="leading" secondItem="LSp-vK-8Pc" secondAttribute="leading" constant="-189" id="bCr-GJ-tck"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xmx-Fq-caA" secondAttribute="trailing" constant="74" id="q0a-5G-HTX"/>
+                            <constraint firstItem="xmx-Fq-caA" firstAttribute="top" secondItem="97e-up-lIg" secondAttribute="bottom" constant="54" id="sMy-4k-3Zh"/>
+                            <constraint firstItem="X1O-QR-1Yj" firstAttribute="trailing" secondItem="GVi-2a-Sbh" secondAttribute="trailing" id="xai-4e-ZeR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Journal" image="second" id="m4t-3N-4JS"/>
+                    <connections>
+                        <outlet property="add2" destination="3g8-e3-ba8" id="vro-LH-pAo"/>
+                        <outlet property="input" destination="0rs-ra-4hs" id="Fvy-N6-al0"/>
+                        <outlet property="input1" destination="USo-2c-W5h" id="vZ4-A0-UcS"/>
+                        <outlet property="input3" destination="TAb-78-R22" id="cfH-qb-2XP"/>
+                        <outlet property="output" destination="O8E-xl-oHn" id="xBf-zX-tWd"/>
+                        <outlet property="output1" destination="Z6O-De-CDY" id="VQF-gV-c6L"/>
+                        <outlet property="output3" destination="fLp-g3-b4w" id="J2l-Sr-SDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Am-jd-2pG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794.39999999999998" y="1126.6866566716642"/>
+        </scene>
+        <!--Care-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="KokuaApp1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1h3-3f-lBY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1451"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-20-Ch9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bkg1" translatesAutoresizingMaskIntoConstraints="NO" id="zYp-Yo-3fC">
+                                                <rect key="frame" x="0.0" y="0.0" width="750" height="1492"/>
+                                            </imageView>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWR-Tu-RRi">
+                                                <rect key="frame" x="30" y="1044" width="315" height="309"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DYh-uQ-Uok">
+                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="309"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Diet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXv-uB-SVA">
+                                                            <rect key="frame" x="8" y="53" width="29" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Helpful Tools for Recovery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E29-ib-WsM">
+                                                            <rect key="frame" x="57" y="8" width="201" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBa-Fr-ToO">
+                                                            <rect key="frame" x="149" y="93" width="0.0" height="0.0"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <string key="text">Eating healthy and making sure to incorporate some Omaga-3 into your diet more. It has been shown to increase brain growth and help in the healing process. </string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAv-NA-rmB">
+                                                            <rect key="frame" x="44" y="46" width="263" height="96"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <string key="text">Eating healthy and making sure to incorporate some Omaga-3 into your diet more. It has been shown to increase brain growth and help in the healing process. </string>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mindfulness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5n-wX-WZe">
+                                                            <rect key="frame" x="8" y="150" width="83" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-pe-hr6">
+                                                            <rect key="frame" x="44" y="175" width="263" height="86"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <string key="text">Mindfulness training has been linked to the highest levels of recovery. It helps to quiet the mind, which in return can decrease pain or mood swings you might be experiencing. </string>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POc-3W-Eyr">
+                                                            <rect key="frame" x="8" y="269" width="0.0" height="0.0"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoT-aE-9fJ">
+                                                            <rect key="frame" x="44" y="294" width="263" height="45"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="309" id="Wmb-Xy-eLP"/>
+                                                </constraints>
+                                                <blurEffect style="light"/>
+                                            </visualEffectView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt8-5g-TvH">
+                                                <rect key="frame" x="30" y="59" width="25" height="25"/>
+                                                <state key="normal" image="menu"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qs7-N9-ueD">
+                                                <rect key="frame" x="115" y="131" width="145" height="75"/>
+                                                <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="75"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2017 Natasha Johnston Toronto, ON Canada " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry9-fp-ngp">
+                                                <rect key="frame" x="95" y="1413" width="184" height="10"/>
+                                                <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="10"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pUR-o4-thB">
+                                                <rect key="frame" x="74" y="207" width="227" height="94"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UHG-3l-acA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="227" height="94"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <blurEffect style="light"/>
+                                            </visualEffectView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-W5-7Vq">
+                                                <rect key="frame" x="74" y="210" width="227" height="91"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="91" id="OWl-kF-ahR"/>
+                                                </constraints>
+                                                <string key="text">This is a space where you can learn more different ways you can help yourself recover.  First let’s start off with; what is a concussion? </string>
+                                                <fontDescription key="fontDescription" name="JosefinSans-SemiBold" family="Josefin Sans" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoKokua" translatesAutoresizingMaskIntoConstraints="NO" id="Gkr-uM-EsI">
+                                                <rect key="frame" x="232" y="39" width="135" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGs-tj-lD1">
+                                                <rect key="frame" x="39" y="336" width="297" height="680"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0dl-Ju-Gi1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="297" height="680"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-Ze-HrG">
+                                                            <rect key="frame" x="-1" y="16" width="298" height="647"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="647" id="6gt-UP-gQU"/>
+                                                            </constraints>
+                                                            <mutableString key="text">The Centers for Disease Control and Prevention (CDC) defines concussion as a traumatic brain injury (TBI) caused by a bump, blow, or jolt to the head or by a hit to the body that causes the head and brain to move rapidly back and forth. This sudden movement can cause the brain to bounce around or twist in the skull, stretching and damaging brain cells and creating chemical changes in the brain.There may be signs of injury to the head, such as bruising or cuts, or there may be no visible injury. A person does not necessarily pass out after a concussion.Concussions are serious injuries.After a bump, jolt, or blow to the head, the signs and symptoms of a concussion may not be readily apparent. However, general signs include(yet there are many more so consult with a doctor is you worry you may have a concussion):•	Dizziness•	Headaches•	Blurred vision•	Nausea•	Vomiting•	Slurred speech•	Appearing dazed•	Ringing in the ears•	Delayed response to questions•	The person may or may not lose consciousness(© http://www.biausa.org/concussion/concussion-information-center )</mutableString>
+                                                            <fontDescription key="fontDescription" name="JosefinSans-Light" family="Josefin Sans" pointSize="17"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="fTB-Ze-HrG" firstAttribute="centerY" secondItem="0dl-Ju-Gi1" secondAttribute="centerY" id="arD-B0-7d1"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fTB-Ze-HrG" secondAttribute="trailing" id="gXp-ME-k6l"/>
+                                                        <constraint firstItem="fTB-Ze-HrG" firstAttribute="centerX" secondItem="0dl-Ju-Gi1" secondAttribute="centerX" id="oL4-I2-ehF"/>
+                                                    </constraints>
+                                                </view>
+                                                <blurEffect style="light"/>
+                                            </visualEffectView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="pUR-o4-thB" firstAttribute="centerX" secondItem="IGs-tj-lD1" secondAttribute="centerX" id="C8k-TY-8hQ"/>
+                                            <constraint firstItem="IGs-tj-lD1" firstAttribute="top" secondItem="pUR-o4-thB" secondAttribute="bottom" constant="35" id="Dyr-MC-pgJ"/>
+                                            <constraint firstItem="Bt8-5g-TvH" firstAttribute="leading" secondItem="Tbl-20-Ch9" secondAttribute="leading" constant="30" id="E5V-2i-m75"/>
+                                            <constraint firstItem="zYp-Yo-3fC" firstAttribute="leading" secondItem="Tbl-20-Ch9" secondAttribute="leading" id="EcV-X6-Bib"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ry9-fp-ngp" secondAttribute="trailing" constant="96" id="FgY-po-qnz"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ry9-fp-ngp" secondAttribute="bottom" constant="77" id="Frt-v8-WlS"/>
+                                            <constraint firstItem="FQx-W5-7Vq" firstAttribute="top" secondItem="Qs7-N9-ueD" secondAttribute="bottom" constant="4" id="GcR-rL-7fK"/>
+                                            <constraint firstItem="pUR-o4-thB" firstAttribute="leading" secondItem="FQx-W5-7Vq" secondAttribute="leading" id="Lx9-ts-QnZ"/>
+                                            <constraint firstItem="qWR-Tu-RRi" firstAttribute="centerX" secondItem="pUR-o4-thB" secondAttribute="centerX" id="Nps-q6-7bj"/>
+                                            <constraint firstItem="Qs7-N9-ueD" firstAttribute="centerX" secondItem="Ry9-fp-ngp" secondAttribute="centerX" id="Pfs-7d-pWo"/>
+                                            <constraint firstItem="qWR-Tu-RRi" firstAttribute="leading" secondItem="Bt8-5g-TvH" secondAttribute="leading" id="RFk-Fp-nAw"/>
+                                            <constraint firstItem="Ry9-fp-ngp" firstAttribute="leading" secondItem="Tbl-20-Ch9" secondAttribute="leading" constant="95" id="WFz-KQ-K5q"/>
+                                            <constraint firstItem="qWR-Tu-RRi" firstAttribute="top" secondItem="IGs-tj-lD1" secondAttribute="bottom" constant="28" id="YrE-hX-w6n"/>
+                                            <constraint firstItem="FQx-W5-7Vq" firstAttribute="centerX" secondItem="IGs-tj-lD1" secondAttribute="centerX" id="Z0t-YK-duS"/>
+                                            <constraint firstItem="Qs7-N9-ueD" firstAttribute="centerX" secondItem="FQx-W5-7Vq" secondAttribute="centerX" id="ZO4-hQ-mg1"/>
+                                            <constraint firstItem="pUR-o4-thB" firstAttribute="top" secondItem="Qs7-N9-ueD" secondAttribute="bottom" constant="1" id="bef-UC-Q60"/>
+                                            <constraint firstItem="pUR-o4-thB" firstAttribute="leading" secondItem="Tbl-20-Ch9" secondAttribute="leading" constant="74" id="cbW-Gd-bis"/>
+                                            <constraint firstItem="Bt8-5g-TvH" firstAttribute="top" secondItem="Tbl-20-Ch9" secondAttribute="top" constant="59" id="fr3-JS-9eG"/>
+                                            <constraint firstItem="zYp-Yo-3fC" firstAttribute="bottom" secondItem="Tbl-20-Ch9" secondAttribute="bottomMargin" id="gQ9-L2-ZwH"/>
+                                            <constraint firstItem="Ry9-fp-ngp" firstAttribute="top" secondItem="qWR-Tu-RRi" secondAttribute="bottom" constant="60" id="hA4-Kp-Rlv"/>
+                                            <constraint firstItem="zYp-Yo-3fC" firstAttribute="top" secondItem="Tbl-20-Ch9" secondAttribute="top" id="mcJ-WJ-Oo2"/>
+                                            <constraint firstAttribute="height" constant="1500" id="sIa-bL-lD2"/>
+                                            <constraint firstItem="Qs7-N9-ueD" firstAttribute="centerX" secondItem="pUR-o4-thB" secondAttribute="centerX" id="skb-MK-q3A"/>
+                                            <constraint firstItem="pUR-o4-thB" firstAttribute="bottom" secondItem="FQx-W5-7Vq" secondAttribute="bottom" id="uOF-dF-0pU"/>
+                                            <constraint firstItem="Qs7-N9-ueD" firstAttribute="top" secondItem="Tbl-20-Ch9" secondAttribute="top" constant="131" id="vyM-Fb-dw2"/>
+                                            <constraint firstItem="qWR-Tu-RRi" firstAttribute="centerX" secondItem="FQx-W5-7Vq" secondAttribute="centerX" id="xBb-eK-9KC"/>
+                                            <constraint firstItem="IGs-tj-lD1" firstAttribute="leading" secondItem="Tbl-20-Ch9" secondAttribute="leading" constant="39" id="yTy-rw-0UX"/>
+                                            <constraint firstAttribute="bottom" secondItem="qWR-Tu-RRi" secondAttribute="bottom" constant="147" id="z7W-Ja-SLQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tbl-20-Ch9" secondAttribute="trailing" id="KsB-Yn-cpp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tbl-20-Ch9" secondAttribute="bottom" constant="-49" id="bv2-mT-dOR"/>
+                                    <constraint firstItem="Tbl-20-Ch9" firstAttribute="leading" secondItem="1h3-3f-lBY" secondAttribute="leading" id="nq1-G9-OnU"/>
+                                    <constraint firstItem="Tbl-20-Ch9" firstAttribute="top" secondItem="1h3-3f-lBY" secondAttribute="top" id="xBk-PO-UkP"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="1h3-3f-lBY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="Bi6-UB-goq"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="1h3-3f-lBY" secondAttribute="bottom" id="buO-gX-pI7"/>
+                            <constraint firstItem="1h3-3f-lBY" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="hab-wj-M9s"/>
+                            <constraint firstAttribute="trailing" secondItem="1h3-3f-lBY" secondAttribute="trailing" id="kyu-oU-3cp"/>
+                            <constraint firstItem="Tbl-20-Ch9" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="tEB-5Z-8aQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Care" image="second" id="cPa-gy-q4n"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1808.5" y="124"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -94,6 +775,9 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="nbT-Uc-X3z" kind="relationship" relationship="viewControllers" id="Ieb-RV-4Sr"/>
+                        <segue destination="hcC-h1-oFD" kind="relationship" relationship="viewControllers" id="CvB-V5-6t0"/>
+                        <segue destination="3gL-9z-Btb" kind="relationship" relationship="viewControllers" id="Jcu-Z3-cje"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -102,7 +786,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bkg1" width="750" height="1334"/>
         <image name="first" width="30" height="30"/>
+        <image name="logoKokua" width="550" height="355"/>
+        <image name="menu" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
